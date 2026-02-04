@@ -26,5 +26,11 @@ function updateCartDisplay() {
     }
 }
 
+// Smooth scroll to sections
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 // Load cart on page load
 document.addEventListener('DOMContentLoaded', updateCartDisplay);
