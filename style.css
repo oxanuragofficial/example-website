@@ -36,7 +36,9 @@ nav a {
     text-decoration: none;
     transition: color 0.3s;
     display:flex;
-    flex-direction: row;;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
