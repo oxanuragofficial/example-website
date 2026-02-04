@@ -6,12 +6,12 @@ body {
     color: #333;
     background-color: #f9f9f9;
 }
-
 header {
     background-color: #000;
     color: white;
-    padding: 1rem;
+    padding: 0.8rem 1rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -20,31 +20,34 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
-    color: #ff0000; /* Red accent for "BIG" */
+    font-size: 1.5rem;
+    color: #ff0000;
 }
 
+/* NAV – Mobile First */
 nav ul {
     list-style: none;
     display: flex;
+    gap: 1rem;                 /* equal spacing */
     margin: 0;
+    padding: 0;
+}
+
+nav li {
+    white-space: nowrap;       /* prevents breaking */
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 0.9rem;
     transition: color 0.3s;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
- 
-    
 }
 
 nav a:hover {
     color: #ff0000;
 }
+
 
 footer {
     background-color: #000;
@@ -55,24 +58,35 @@ footer {
 }
 
 /* Responsive Navigation */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction:row;
-        align-items: center;
-        justify-content: space-evenly;
-        padding :0;
-margin: 0;
-      width:100%;
-    }
+@media (min-width: 1024px) {
+
     header {
-        flex-direction: column;
-        text-align: center;
+        padding: 1.2rem 3rem;
     }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 2.5rem;          /* more space on laptop */
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+nav {
+    overflow-x: auto;
+}
+
+nav ul {
+    flex-wrap: nowrap;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('https://img.freepik.com/premium-photo/interior-brand-new-fashion-clothing-store_652667-137.jpg');
+    background-image: url('https://thumbs.dreamstime.com/z/inside-big-shop-19719092.jpg');
     background-size: cover;
     background-position: center;
     height: 60vh;
