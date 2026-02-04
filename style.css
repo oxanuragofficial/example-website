@@ -57,7 +57,9 @@ footer {
 /* Responsive Navigation */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: row;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-between;
         gap: 0.5rem;
     }
     header {
