@@ -59,7 +59,7 @@ footer {
     nav ul {
         flex-direction:row;
         align-items: center;
-        justify-content: space-arround;
+        justify-content: space-evenly;
         gap: 0.5rem;
     }
     header {
